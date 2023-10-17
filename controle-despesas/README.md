@@ -14,4 +14,66 @@ Como usuário, gostaria de um sistema que faça o cadastro das minhas dividas, s
 * JAVA;
 
 ## Criação do Banco:
-* 
+* CREATE TABLE Despesas (
+    CodDesp INT AUTO_INCREMENT,
+    Data DATE,
+    Desc VARCHAR(500),
+    Val DECIMAL(10, 2),
+    Cat VARCHAR(50),
+    PRIMARY KEY (CodDesp)
+);
+
+## Classes:
+
++----------------------------------+
+|             Despesa              |
++----------------------------------+
+| - id: int                        |
+| - data: Date                     |
+| - descricao: String              |
+| - valor: double                  |
+| - categoria: String              |
++----------------------------------+
+| + getters e setters              |
++----------------------------------+
+
++----------------------------------+
+|           DespesaDAO             |
++----------------------------------+
+| - connection: Connection         |
++--------------------------------------------+
+| + inserirDespesa(despesa: Despesa): void   |
+| + listarDespesas(): List<Despesa>          |
+| + removerDespesa(id: int): void            |
+| + atualizarDespesa(despesa: Despesa): void |
++--------------------------------------------+
+
++----------------------------------+
+|      ListarDespesasUI            |
++----------------------------------+
+| - despesaDAO: DespesaDAO         |
++--------------------------------------------+
+| + ListarDespesasUI(despesaDAO: DespesaDAO) |
+| + initGrid(): void                         |
+| + Outros métodos para interação de UI      |
++--------------------------------------------+
+
++----------------------------------+
+|      RemoverDespesaUI            |
++----------------------------------+
+| - despesaDAO: DespesaDAO         |
++--------------------------------------------+
+| + RemoverDespesaUI(despesaDAO: DespesaDAO) |
+| + initGrid(): void                         |
+| + Outros métodos para interação de UI      |
++--------------------------------------------+
+
++----------------------------------+
+|      AtualizarDespesaUI          |
++----------------------------------+
+| - despesaDAO: DespesaDAO         |
++----------------------------------------------+
+| + AtualizarDespesaUI(despesaDAO: DespesaDAO) |
+| + initGrid(): void                           |
+| + Outros métodos para interação de UI        |
++----------------------------------------------+
