@@ -15,12 +15,12 @@ Como usuário, gostaria de um sistema que faça o cadastro das minhas dividas, s
 
 ## Criação do Banco:
 * CREATE TABLE Despesas (
-    CodDesp INT AUTO_INCREMENT,
-    Data DATE,
-    Desc VARCHAR(500),
-    Val DECIMAL(10, 2),
-    Cat VARCHAR(50),
-    PRIMARY KEY (CodDesp)
+   <br> CodDesp INT AUTO_INCREMENT,
+   <br> Data DATE,
+   <br> Desc VARCHAR(500),
+   <br> Val DECIMAL(10, 2),
+   <br> Cat VARCHAR(50),
+   <br> PRIMARY KEY (CodDesp)
 );
 
 ## Classes:
