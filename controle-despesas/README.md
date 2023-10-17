@@ -25,4 +25,6 @@ Como usuário, gostaria de um sistema que faça o cadastro das minhas dividas, s
 
 ## Classes:
 
+<img src="images\cadastroEntradaProduto.png">
+
 
